@@ -1,7 +1,6 @@
 import logo from "@/assets/Logo.png";
 import wallet from "@/assets/wallet-logo.svg";
 import Image from "next/image";
-import { PrimaryButton } from "../ui/Button";
 import heroBgEffect from "@/assets/HeroBGEffect.png";
 import Link from "next/link";
 

@@ -227,7 +227,7 @@ const Test = () => {
              <div className="w-full">
               <Link href="/global-crypto" className="w-full">
               <motion.div
-                className="mt-8"
+                className="mt-8 w-full"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
