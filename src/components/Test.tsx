@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 // import buttonImg from "@/assets/join/downloadbutton.png";
-import cartBgImg from "@/assets/offer-img-by-s/cart-bg.png";
 import heroBgEffect from "@/assets/Circle.png";
 import joinCover from "@/assets/join/pdfimg.png";
 import telegramImg from "@/assets/join/telegram.png";
+import cartBgImg from "@/assets/offer-img-by-s/cart-bg.png";
 import { PrimaryButton, SecondaryButton } from "@/components/ui/Button";
 import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -164,7 +164,7 @@ const Test = () => {
   return (
     <div className="relative">
       {/* Background image */}
-      <div className="absolute top-5/12 xl:top-3/12 left-0 w-full h-full -z-10">
+      <div className="absolute top-5/12 xl:top-3/12 left-0 w-full -z-20">
         <Image src={heroBgEffect} alt="bg" className="w-[25%] object-cover" />
       </div>
       {/* Join */}
@@ -172,7 +172,7 @@ const Test = () => {
         <div className="flex flex-col-reverse lg:flex-row gap-8 items-stretch">
           {/* -------- Left Section (PDF) -------- */}
           <motion.div
-            className="w-full lg:w-1/2 flex flex-col space-y-6"
+            className="w-full lg:w-1/2 flex flex-col space-y-0"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -255,66 +255,71 @@ const Test = () => {
           </motion.div>
 
           {/* -------- Right Section (Telegram) -------- */}
-         {/* -------- Right Section (Telegram) -------- */}
-        <motion.div
-          className="w-full lg:w-1/2 p-4 sm:p-12 mt-2 shadow-2xl rounded-2xl flex flex-col justify-between h-full md:translate-y-66 lg:translate-y-60 relative"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          {/* Background Image and Overlay */}
-          <div
-            className="absolute inset-0 bg-cover bg-center z-0"
-            style={{
-              backgroundImage: `url(${cartBgImg.src})`, // Replace with your image URL
-              // filter: "brightness(50%)", // Adjust overlay darkness here
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
-
+          {/* -------- Right Section (Telegram) -------- */}
           <motion.div
-            className="relative z-10 text-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            viewport={{ once: true }}
+            className="w-full lg:w-1/2 p-4 sm:p-12 mt-2  shadow-2xl rounded-2xl flex flex-col justify-between h-80 md:translate-y-66 lg:translate-y-60 relative"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
+            {/* Background Image and Overlay */}
+            <div
+              className="absolute inset-0 bg-cover bg-center z-0 "
+              style={{
+                backgroundImage: `url(${cartBgImg.src})`, // Replace with your image URL
+                // filter: "brightness(30%)", // Adjust overlay darkness here
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              
+            />
+
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+              className="relative z-10 text-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Image
-                width={80}
-                height={80}
-                src={telegramImg || "/placeholder.svg"}
-                alt="Telegram Icon"
-                className="mx-auto  h-42 w-42  md:h-32 md:w-32"
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Image
+                  width={80}
+                  height={80}
+                  src={telegramImg || "/placeholder.svg"}
+                  alt="Telegram Icon"
+                  className="mx-auto  h-42 w-42  md:h-32 md:w-32"
+                />
+              </motion.div>
+              <motion.h1
+                className="text-3xl sm:text-2xl font-semibold text-white"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+                viewport={{ once: true }}
+              >
+                Join Our Telegram
+              </motion.h1>
+            </motion.div>
+            <motion.div
+              className="mt-10 relative z-10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
+              viewport={{ once: true }}
+            >
+              <PrimaryButton
+                title="Click Here "
+                className="w-full"
+                icon={false}
               />
             </motion.div>
-            <motion.h1
-              className="text-3xl sm:text-2xl font-semibold text-white"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              Join Our Telegram
-            </motion.h1>
           </motion.div>
-          <motion.div
-            className="mt-10 relative z-10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
-            viewport={{ once: true }}
-          >
-           <PrimaryButton title="Click Here " className="w-full" icon={false} />
-          </motion.div>
-        </motion.div>
         </div>
       </div>
       {/* Roadmap */}

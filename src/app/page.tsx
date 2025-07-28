@@ -12,7 +12,7 @@ import Test from "@/components/Test";
 
 function Home() {
   return (
-    <div>
+    <div >
       <Navbar />
       <Banner />
       <About />
