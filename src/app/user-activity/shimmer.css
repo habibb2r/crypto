@@ -1,0 +1,44 @@
+.shimmer-container {
+  position: relative;
+  border-radius: 0.75rem; /* matches rounded-xl */
+  background: #1A1A1A;
+  padding: 1.5px; /* This creates space for the border */
+}
+
+.shimmer-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: linear-gradient(
+    45deg,
+    rgb(182, 147, 42),
+    rgb(212, 171, 7),
+    rgb(170, 145, 4),
+    rgb(250, 204, 21),
+    rgb(160, 121, 4)
+  );
+  animation: shimmer-rotate 15s linear infinite;
+}
+
+.shimmer-container > div {
+  position: relative;
+  background: rgb(26, 26, 26); /* Semi-transparent so gradient shows through */
+  border-radius: calc(0.75rem - 2px);
+  z-index: 1;
+  margin: 1px;
+}
+
+@keyframes shimmer-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effect to speed up the shimmer */
+.shimmer-container:hover::before {
+  animation-duration: 2s;
+}
