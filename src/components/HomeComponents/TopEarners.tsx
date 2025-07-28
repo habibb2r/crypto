@@ -9,6 +9,7 @@ import { TableButton } from "../ui/TableButton";
 
 import { motion } from "framer-motion";
 import { SecondaryButton } from "../ui/Button";
+import Link from "next/link";
 
 const TopEarners = () => {
   const earners = [
@@ -137,18 +138,18 @@ const TopEarners = () => {
                 </div>
 
                 {/* Profile Button */}
-                <div className="flex justify-center">
+                <Link href="/monthly-top-earners" className="flex justify-center">
                   <TableButton
                     title="Join our team"
                     className="w-full sm:w-auto"
                     icon={false}
                   />
-                </div>
+                </Link>
               </div>
             ))}
-            <div className="block md:hidden mt-4">
+            <Link href="/monthly-top-earners" className="block md:hidden mt-4">
                <SecondaryButton title="View more" className="w-full" />
-            </div>
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -223,18 +224,18 @@ const TopEarners = () => {
                 </div>
 
                 {/* Profile Button */}
-                <div className="flex justify-center">
+                <Link href="/alltime-top-earners" className="flex justify-center">
                   <TableButton
                     title="Join our team"
                     className="w-full sm:w-auto"
                     icon={false}
                   />
-                </div>
+                </Link>
               </div>
             ))}
-            <div className="block md:hidden mt-4">
+            <Link href="/alltime-top-earners" className="block md:hidden mt-4">
                <SecondaryButton title="View more" className="w-full" />
-            </div>
+            </Link>
           </div>
         </motion.div>
       </div>

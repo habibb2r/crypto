@@ -231,20 +231,8 @@ const Test = () => {
                 transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
                 viewport={{ once: true }}
               >
-                <Link href="/">
-                  {/* <motion.p
-                  className="flex-1 text-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View More
-                </motion.p>
-                <Image
-                  src={buttonImg || "/placeholder.svg"}
-                  height={28}
-                  width={28}
-                  alt="Download Icon"
-                /> */}
+                <Link href="/global-crypto">
+                 
                   <SecondaryButton
                     title="View More"
                     className="w-full lg:w-auto"

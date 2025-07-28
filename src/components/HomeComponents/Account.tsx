@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { PrimaryButton, SecondaryButton } from "../ui/Button";
+import Link from "next/link";
 
 export default function AccountPreviewSection() {
   return (
@@ -9,7 +10,7 @@ export default function AccountPreviewSection() {
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" /> */}
       {/* Title */}
-      <h2 className="text-white text-4xl font-semibold mb-10">
+      <h2 className="text-white text-3xl md:text-4xl font-semibold mb-10">
         Account Preview Mode
       </h2>
 
@@ -35,7 +36,9 @@ export default function AccountPreviewSection() {
           />
 
           {/* Preview Button */}
+          <Link href="/auth">
           <PrimaryButton title="Preview" className="w-full" icon={false} />
+          </Link>
         </motion.div>
 
         {/* RIGHT CARD - Random Account */}
@@ -52,7 +55,9 @@ export default function AccountPreviewSection() {
           </h3>
 
           {/* Click Demo Button */}
+          <Link href="/auth">
           <SecondaryButton title="Click Demo" className="w-full" />
+          </Link>
         </motion.div>
       </div>
     </section>

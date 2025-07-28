@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 // import image from "@/assets/about-image.png";
 import Image from "next/image";
 import { SecondaryButton } from "../ui/Button";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -60,26 +61,10 @@ export default function AboutSection() {
                 full control of their digital assets.
               </motion.p>
 
-              <SecondaryButton title="View more" className="w-full lg:w-auto" />
+              <Link href="/aboutus">
+                <SecondaryButton title="View more" className="w-full lg:w-auto" />
+              </Link>
             </motion.div>
-
-            {/* Right Logo */}
-            {/* <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-            className="flex-shrink-0"
-          >
-            <div>
-              <Image
-                src={image}
-                alt="About Global Crypto Alliance"
-                width={500}
-                height={500}
-                className="rounded-lg shadow-lg object-cover"
-              />
-            </div>
-          </motion.div> */}
             {/* new code  */}
           </div>
         </div>

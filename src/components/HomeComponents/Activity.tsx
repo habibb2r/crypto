@@ -8,6 +8,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { TableButton } from "../ui/TableButton";
+import Link from "next/link";
 // start work here
 const Activity = () => {
   const incomeStreams = [
@@ -251,7 +252,7 @@ const Activity = () => {
               </motion.div>
 
               {/* See More Button */}
-              <div className="flex justify-center p-4">
+              <Link href="/user-activity" className="flex justify-center p-4">
                 <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -266,7 +267,7 @@ const Activity = () => {
                     See More
                   </button>
                 </motion.div>
-              </div>
+              </Link>
             </div>
           </section>
         </div>
