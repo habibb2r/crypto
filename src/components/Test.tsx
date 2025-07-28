@@ -224,6 +224,8 @@ const Test = () => {
                   automatically and sustainably.
                 </motion.p>
               </div>
+             <div className="w-full">
+              <Link href="/global-crypto" className="w-full">
               <motion.div
                 className="mt-8"
                 initial={{ opacity: 0, y: 30 }}
@@ -231,14 +233,15 @@ const Test = () => {
                 transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
                 viewport={{ once: true }}
               >
-                <Link href="/global-crypto">
                  
                   <SecondaryButton
                     title="View More"
-                    className="w-full lg:w-auto"
+                    className="w-full "
                   />
-                </Link>
+          
               </motion.div>
+             </Link>
+             </div>
             </motion.div>
           </motion.div>
 

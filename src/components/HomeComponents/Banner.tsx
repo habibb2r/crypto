@@ -17,10 +17,6 @@ export default function Banner() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full max-w-[1320px] rounded-3xl border border-[#fee50172] overflow-hidden backdrop-blur lg:py-10"
       >
-        {/* Background gradient effects */}
-        {/* <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" /> */}
-        {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" /> */}
-
         <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between p-8 lg:p-16 gap-12">
           {/* Left Content */}
           <div className="flex-1 text-white">
@@ -86,9 +82,13 @@ export default function Banner() {
 
           {/* Right Logo */}
           <motion.div
-            // initial={{ opacity: 0, x: 50, rotate: -10 }}
-            animate={{ opacity: 1, x: 0, rotate: 0 }}
-            transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+           animate={{ y: [-15, 15] }} // Move up, center, down, center
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      }}
             className="lg:w-[40%]"
           >
             <div className=" h-38 lg:h-auto">
