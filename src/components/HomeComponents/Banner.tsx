@@ -6,6 +6,7 @@ import logo2 from "@/assets/logo-2.png";
 import Image from "next/image";
 import { PrimaryButton, SecondaryButton } from "../ui/Button";
 import { FaVideo } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -66,16 +67,20 @@ export default function Banner() {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 items-center"
             >
-              <SecondaryButton
+             <Link href="/wallettutorial">
+               <SecondaryButton
                 title="Watch Tutorial"
                 icon={FaVideo}
                 className="w-full lg:w-auto"
               />
+             </Link>
 
-              <PrimaryButton
-                title="Connect Wallet"
-                className="w-full lg:w-auto"
-              />
+              <Link href="/wallettutorial">
+                <PrimaryButton
+                  title="Get Started"
+                  className="w-full lg:w-auto"
+                />
+              </Link>
             </motion.div>
           </div>
 
